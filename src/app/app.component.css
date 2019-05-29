@@ -1,0 +1,44 @@
+.main{
+    color: teal;
+    font: 50px bold;
+}
+header{
+    background-color:lightsalmon;
+    text-align:center;
+    width: 100%;
+    position: fixed;
+    display:block;
+    height: auto;
+    top:0;
+    left:0;
+    padding: 10px;
+}
+
+
+.taskCreate{
+    
+    top:166px;
+    left:0px;
+    width: 100%;
+    position: fixed;
+}
+.showTasks{
+    top:200px;
+    left:0px;
+    width: 100%;
+    position: fixed;
+    font:10px;
+    height: 500px;
+    padding: 10px;
+}
+footer{
+    color: white;
+    background-color:black;
+    text-align:center;
+    font: 20px bold;
+    padding:8px;
+    width: 100%;
+    bottom:0;
+    left:0;
+    position: fixed;
+}

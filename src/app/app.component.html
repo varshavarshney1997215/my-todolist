@@ -1,0 +1,45 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<header>
+  <h1 class="main">
+    {{ title }}  
+  </h1>
+</header>
+
+<section class="container-fluid taskCreate">
+  <form class="form-inline">
+    <div class="form-group">
+        <label class="control-label">Task Name:</label>
+        <input type="text" class="form-control" #task placeholder="Write task here..." required>
+    </div>&nbsp;&nbsp;
+    <div class="form-group">
+        <label class="control-label">Task Time:</label>
+        <input type="text" class="form-control" id="scheduleTask" #taskTime placeholder="Choose task time from calendar" required>
+    
+      </div>&nbsp;&nbsp;
+    <div class="form-group">
+        <label class="control-label">Priority:</label>
+        <select class="form-control" #priority (change)='priorityChangedHandler($event)' >
+            <option value="High">High</option>
+            <option value="Moderate">Moderate</option>
+            <option value="Normal">Normal</option>
+          </select>
+    </div>&nbsp;&nbsp;
+    <button class="btn btn-primary" (click)='addtask(task.value,taskTime.value,priority.value)'>Schedule Task</button>
+  </form>
+  
+</section>
+<section class="showTasks">
+    <div> 
+            <ul *ngFor="let task of taskList">
+              <li><b>{{task}}</b>&nbsp;&nbsp;<i class="glyphicon glyphicon-remove" (click)='removeTask(task)'></i></li>
+            </ul>
+           
+    </div>
+</section>
+<footer>
+  <h3>
+    @Copyright {{ todayDate|date:'yyyy'}} {{author}}
+  </h3>
+</footer>
+<router-outlet></router-outlet>
